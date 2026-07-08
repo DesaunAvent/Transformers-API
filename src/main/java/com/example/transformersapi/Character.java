@@ -17,7 +17,6 @@ public class Character {
     private String description;
 
     private String faction;
-    private String alternateMode;
     private String universe;
     private String role;
 
@@ -28,7 +27,6 @@ public class Character {
         this.name = name;
         this.description = description;
         this.faction = faction;
-        this.alternateMode = alternateMode;
         this.universe = universe;
         this.role = role;
     }
@@ -65,13 +63,6 @@ public class Character {
         this.faction = faction;
     }
 
-    public String getAlternateMode() {
-        return alternateMode;
-    }
-
-    public void setAlternateMode(String alternateMode) {
-        this.alternateMode = alternateMode;
-    }
 
     public String getUniverse() {
         return universe;
