@@ -2,7 +2,7 @@
 
 ## Deployed API
 
-[transformers-api-n1rl.onrender.com](https://transformers-api-n1rl.onrender.com)
+[transformers-api-n1rl.onrender.com](https://transformers-api-n1rl.onrender.com)/api/characters
 
 ## Endpoints
 
