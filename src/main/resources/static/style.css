@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: white;
+}
+
+nav {
+  background: #020617;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #facc15;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #1f2937;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #d1d5db;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.card {
+  background: #374151;
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h2 {
+  color: #facc15;
+}
+
+.card p {
+  padding: 0 15px;
+}
+
+.button {
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 20px;
+  background: #facc15;
+  color: #111827;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background: #fde047;
+}
+
+.character-page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.character-page img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.character-page ul {
+  text-align: left;
+  display: inline-block;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+.back-button {
+    display: block;
+    width: 180px;      
+    margin: 30px auto;
+    text-align: center;
+
+    padding: 12px;
+    background-color: #facc15;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+#searchBar {
+    display: block;
+    width: 60%;
+    margin: 30px auto;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+textarea {
+    min-height: 120px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+}
