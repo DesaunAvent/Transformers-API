@@ -12,3 +12,15 @@ function searchCharacters() {
         }
     }
 }
+const characterContainer = document.getElementById("character-container");
+
+async function loadCharacters() {
+    const response = await fetch("/characters");
+    const characters = await response.json();
+
+    characters.forEach(character => {
+        console.log(character);
+    });
+}
+
+loadCharacters();
