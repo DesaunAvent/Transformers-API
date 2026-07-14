@@ -23,6 +23,9 @@ public class CharacterService {
     public Character addCharacter(Character character) {
         return characterRepository.save(character);
     }
+    public Character createCharacter (Character character){
+        return characterRepository.save(character)
+    }
 
     public Character updateCharacter(Long id, Character updatedCharacter) {
         Character existingCharacter = characterRepository.findById(id).orElse(null);
@@ -36,6 +39,7 @@ public class CharacterService {
         existingCharacter.setFaction(updatedCharacter.getFaction());
         existingCharacter.setUniverse(updatedCharacter.getUniverse());
         existingCharacter.setRole(updatedCharacter.getRole());
+        existingCharacter.setImage(updatedCharacter.getImage());
 
         return characterRepository.save(existingCharacter);
     }

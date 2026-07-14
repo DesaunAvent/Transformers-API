@@ -21,7 +21,7 @@ public class CharacterController {
         return characterService.getAllCharacters();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("characters/{id}")
     public ResponseEntity<Character> getCharacterById(@PathVariable Long id) {
         Character character = characterService.getCharacterById(id);
 
@@ -32,12 +32,17 @@ public class CharacterController {
         return ResponseEntity.ok(character);
     }
 
-    @PostMapping
-    public Character addCharacter(@RequestBody Character character) {
-        return characterService.addCharacter(character);
-    }
+    @PostMapping("/api/characters")
+public ResponseEntity<Character> createCharacter(
+        @RequestBody Character character
+) {
+    Character savedCharacter =
+            characterService.createCharacter(character);
 
-    @PutMapping("/{id}")
+    return ResponseEntity.ok(savedCharacter);
+}
+
+    @PutMapping("characters/{id}")
     public ResponseEntity<Character> updateCharacter(
             @PathVariable Long id,
             @RequestBody Character updatedCharacter
@@ -50,8 +55,9 @@ public class CharacterController {
 
         return ResponseEntity.ok(character);
     }
+    
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("characters/{id}")
     public ResponseEntity<Void> deleteCharacter(@PathVariable Long id) {
         boolean deleted = characterService.deleteCharacter(id);
 
@@ -62,17 +68,17 @@ public class CharacterController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/faction/{faction}")
+    @GetMapping("characters/faction/{faction}")
     public List<Character> getCharactersByFaction(@PathVariable String faction) {
         return characterService.getCharactersByFaction(faction);
     }
 
-    @GetMapping("/universe/{universe}")
+    @GetMapping("characters/universe/{universe}")
     public List<Character> getCharactersByUniverse(@PathVariable String universe) {
         return characterService.getCharactersByUniverse(universe);
     }
 
-    @GetMapping("/search")
+    @GetMapping("characters/search")
     public List<Character> searchCharactersByName(@RequestParam String name) {
         return characterService.searchCharactersByName(name);
     }

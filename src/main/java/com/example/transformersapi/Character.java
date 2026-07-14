@@ -1,7 +1,6 @@
 package com.example.transformersapi;
 
 import jakarta.persistence.*;
-
 @Entity
 @Table(name = "characters")
 public class Character {
@@ -15,20 +14,21 @@ public class Character {
 
     @Column(nullable = false, length = 1000)
     private String description;
-
     private String faction;
     private String universe;
     private String role;
+    private String image;
 
     public Character() {
     }
 
-    public Character(String name, String description, String faction, String alternateMode, String universe, String role) {
+    public Character(String name, String description, String faction, String universe, String role, String Image) {
         this.name = name;
         this.description = description;
         this.faction = faction;
         this.universe = universe;
         this.role = role;
+        this.image = image;
     }
 
     public Long getCharacterId() {
@@ -78,5 +78,11 @@ public class Character {
 
     public void setRole(String role) {
         this.role = role;
+    }
+    public void setImage(String image) {
+        this.image = image;
+    }
+    public String getImage() {
+        return image;
     }
 }
